@@ -1,0 +1,119 @@
+/*
+Theme Name:     Peixe Urbano
+Theme URI:      http://peixeurbano.com
+Description:    Child theme for the Twenty Twelve theme 
+Author:         Daniel Blumenthal
+Author URI:     http://blumenthal.com.br
+Template:       twentytwelve
+Version:        1.0
+*/
+
+
+@import url("../twentytwelve/style.css");
+
+
+.header{
+    background: white;
+    line-height: 60px;
+    height: 86px;
+}
+
+
+h1.site-title a{
+    background: url('http://blumenthal.com.br/faq/wp-content/themes/peixeurbano/logo-azul.jpg') no-repeat white;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+    height: 78px;
+}
+
+.site-description {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 82px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+span.entry-title{
+    font-weight: bold;
+}
+
+
+.toolbar{
+    background: #2066A2;
+    line-height: 40px;
+    height: 40px;
+}
+
+.toolbar .row {
+    line-height: 40px;
+    height: 40px;
+    margin: 0 auto;
+    width: 1024px;
+    position: relative;
+}
+
+.toolbar .row a {
+    color: white !important;
+    text-decoration: none;
+     margin-right: 20px;
+}
+
+/* --------------------------------------
+    LINHAS COM LARGURA FIXA
+-----------------------------------------------------*/
+
+.header > .row,
+.content > .row,
+.footer > .row,
+.nav-bar > .row,
+.pos_footer > .row {
+    margin: 0 auto;
+    width: 1024px;
+    position: relative;
+}
+
+/* --------------------------------------
+    LAYOUT
+-----------------------------------------------------*/
+
+a {color: #1D7AC6 !important; }
+
+body {
+		background-color: #f1f1f1;
+	}
+	
+body .site {
+		padding: 0 40px;
+		padding: 0 2.857142857rem;
+		margin-top: 48px;
+		margin-top: 3.428571429rem;
+		margin-bottom: 48px;
+		margin-bottom: 3.428571429rem;
+		box-shadow: none;
+		border: 1px solid #ccc;
+		border-radius: 14px;
+	}
+	
+.site-header {
+		display: none;
+	}
+	
+/* --- posts --- */
+
+.entry-header .comments-link{
+	margin-top: 0px;
+}
+
+footer.entry-meta {
+	font-size: 11px;
+}
+
+h3.qa-faq-title {
+	font-size: 14px;
+	line-height: 0;
+}
+
+
