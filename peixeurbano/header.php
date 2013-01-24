@@ -29,13 +29,18 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+
+
+<!-- serve só pra exibir as ondas no footer -->
+<script type="text/javascript" src="http://www.peixeurbano.com.br/Content/V2/newdesign/js/jquery.min.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>
 
 <div class="header">
 	    <div class="row">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?> / <span class="entry-title">
 				<?php the_title(); ?>
 			</span></h2>
@@ -44,12 +49,14 @@
 
 
 <div class="toolbar">
-	    <div class="row">
-			<a href="/faq/ajuda" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Ajuda</a>
-			<a href="/faq" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Imprensa</a>
-			<a href="http://blumenthal.com.br/faq/dev/template" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Dev</a>
-			
-		</div> <!-- fecha row -->
+<div class="row">
+
+			<a href="/faq/">Ajuda</a>
+			<a href="/faq/peixe-urbano">Imprensa</a>
+			<a href="/faq/institucional">Institucional</a>
+			<a href="http://blumenthal.com.br/faq/dev/template">#Dev</a>
+		
+</div> <!-- fecha row -->
 </div>
 
 

@@ -12,19 +12,40 @@ Version:        1.0
 @import url("../twentytwelve/style.css");
 
 
+a::-moz-focus-inner {border: 0;}
+a:focus{outline:0;}
+::selection{
+	background:#F7F4B1;
+	color:#444;
+}
+::-moz-selection{
+	background: #F7F4B1;
+	color:#444;
+}
+abbr {cursor: help;}
+
+
+
+/* --------------------------------------
+    LINHAS COM LARGURA FIXA
+-----------------------------------------------------*/
+
 .header{
     background: white;
     line-height: 60px;
     height: 86px;
 }
 
-
+h1.site-title {display: block;}
 h1.site-title a{
     background: url('http://blumenthal.com.br/faq/wp-content/themes/peixeurbano/logo-azul.jpg') no-repeat white;
     text-indent: -9999px;
     overflow: hidden;
     display: block;
     height: 78px;
+}
+h1.site-title a:active {
+    background: url('http://blumenthal.com.br/faq/wp-content/themes/peixeurbano/logo-azul.jpg') no-repeat white 0px 1px;
 }
 
 .site-description {
@@ -42,23 +63,28 @@ span.entry-title{
 
 
 .toolbar{
-    background: #2066A2;
+    background: #17679d;
     line-height: 40px;
-    height: 40px;
 }
 
 .toolbar .row {
     line-height: 40px;
-    height: 40px;
     margin: 0 auto;
     width: 1024px;
-    position: relative;
 }
+
 
 .toolbar .row a {
     color: white !important;
     text-decoration: none;
-     margin-right: 20px;
+    text-decoration: none;
+     line-height: 40px;
+     font-size: 14px;
+     display: inline-block;
+     padding: 0 10px;
+}
+.toolbar .row a:hover {
+    background: #0C5189;
 }
 
 /* --------------------------------------
@@ -79,7 +105,8 @@ span.entry-title{
     LAYOUT
 -----------------------------------------------------*/
 
-a {color: #1D7AC6 !important; }
+a {color: #1D7AC6 !important; text-decoration: none; }
+a:hover, a:active {text-decoration: underline; }
 
 body {
 		background-color: #f1f1f1;
@@ -88,8 +115,7 @@ body {
 body .site {
 		padding: 0 40px;
 		padding: 0 2.857142857rem;
-		margin-top: 48px;
-		margin-top: 3.428571429rem;
+		margin-top: 40px;
 		margin-bottom: 48px;
 		margin-bottom: 3.428571429rem;
 		box-shadow: none;
@@ -101,7 +127,9 @@ body .site {
 		display: none;
 	}
 	
-/* --- posts --- */
+/* --------------------------------------
+    POSTS
+-----------------------------------------------------*/
 
 .entry-header .comments-link{
 	margin-top: 0px;
@@ -111,9 +139,261 @@ footer.entry-meta {
 	font-size: 11px;
 }
 
-h3.qa-faq-title {
-	font-size: 14px;
-	line-height: 0;
+.site-content article {
+	border-bottom: 4px solid #ededed;
+}
+footer.entry-meta {
+	margin-bottom: 20px;
+	margin-bottom: 1.714285714rem;
+	margin-top: 0px;
+	font-size: 11px;
+	line-height: 1.846153846;
+	color: #757575;
 }
 
+.site-content article {
+	border-bottom: 4px solid #ededed;
+	margin-bottom: 30px;
+}
+
+.form-allowed-tags, .logged-in-as {
+	display: none;
+}
+
+.nav-next a, .next-image {
+	padding: 10px;
+}
+.nav-next a:hover, .next-image:hover {
+	background: #17679D;
+	color: white !important;
+}
+
+
+/* --- botoes  (nao funciona direito!) --- */
+
+.btn {
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7F7F7',endColorstr='#E4E4E4')
+	}
+.btn.primary {
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa105',endColorstr='#ff6600')
+	}
+.btn.secondary {
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#629fc4',endColorstr='#356da6')
+	}
+.btn.danger {
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b',endColorstr='#C43C35')
+	}
+.btn.sucess {
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c462',endColorstr='#57A957')
+	}
+.btn.btFB {
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7194C7',endColorstr='#7194C7')
+	}
+}
+input[type="submit"] {
+background: red;
+	}
+button, input[type="submit"], input[type="button"], input[type="reset"], .btn {
+	line-height:.7em;
+	border:1px solid #c4c4c4;
+	padding:8px;
+	margin:5px;
+	cursor:pointer;
+	text-align:center;
+	display:inline-block;
+	text-transform:uppercase;
+	color:#666;
+	text-shadow:-1px -1px 1px #fff;
+	overflow:visible;
+	text-decoration:none;
+	background-color:#efefef;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow:inset 0 1px 0 0 rgba(255,255,255,.4);
+	-webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,.4);
+	box-shadow:inset 0 1px 0 0 rgba(255,255,255,.4);
+	-webkit-transition:all .1s linear;
+	-moz-transition:all .1s linear;
+	-o-transition:all .1s linear;
+	transition:all .1s linear;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	
+}
+.btn:hover {
+	opacity:.85;
+	text-decoration:none!important;
+}
+.btn:active {
+	-webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,.25),0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow:inset 0 2px 4px rgba(0,0,0,.25),0 1px 2px rgba(0,0,0,.05);
+	box-shadow:inset 0 2px 4px rgba(0,0,0,.25),0 1px 2px rgba(0,0,0,.05);
+}
+.btn[disabled] {
+	cursor:default;
+	color:#666;
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	filter:alpha(opacity=65);
+	-khtml-opacity:.65;
+	-moz-opacity:.65;
+	opacity:.65;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+.btn.primary {
+	text-shadow:0 -1px #c46827;
+	color:#fff;
+	background-color:#ed5213;
+	border-color:#ae7455;
+	background-image:-webkit-linear-gradient(top,#f69647 0%,#ed5213);
+	background-image:-moz-linear-gradient(top,#f69647 0%,#ed5213);
+	background-image:-linear-gradient(top,#f69647 0%,#ed5213);
+}
+.btn.secondary {
+	text-shadow:0 -1px #2e5a87;
+	color:#fff;
+	background-color:#356da6;
+	border-color:#23578a;
+	background-image:-webkit-linear-gradient(top,#629fc4 0%,#356da6);
+	background-image:-moz-linear-gradient(top,#629fc4 0%,#356da6);
+	background-image:-linear-gradient(top,#629fc4 0%,#356da6);
+}
+.btn.danger {
+	text-shadow:0 -1px #a41f1c;
+	color:#fff;
+	background-color:#c43c35;
+	border-color:#882a25;
+	background-image:-webkit-linear-gradient(top,#ee5f5b 0%,#c43c35);
+}
+.btn.sucess {
+	text-shadow:0 -1px #1a631a;
+	color:#fff;
+	background-color:#57a957;
+	border-color:#3d773d;
+	background-image:-webkit-linear-gradient(top,#62c462 0%,#57a957);
+}
+.btn.normal {
+	font-size:12px;
+	padding:9px 15px;
+}
+.btn.small {
+	font-size:10px;
+	padding:8px 9px;
+}
+.btn.next {
+	position:relative;
+	padding-right:20px;
+}
+.btn.next:before {
+	content:"";
+	display:block;
+	width:37px;
+	height:100%;
+	position:absolute;
+	padding:1px;
+	top:-1px;
+	right:-1px;
+	background:url('../../V2/newdesign/css/btn_arrow.png') right center
+}
+.btFB {
+	padding:10px 10px 3px 0;
+	font-weight:bold!important
+}
+.btFB:hover {
+	color:#fff!important
+}
+.btFB span {
+	float:left;
+	width:25px;
+	height:15px;
+	margin:-2px 5px 3px 0;
+	border-right:1px solid #4a6ea8;
+	background:url("/Content/V2/newdesign/img/logoFB.png") center no-repeat
+}
+.btMobile {
+	margin:95px 0 0 120px!important;
+	float:right;
+	position:absolute
+}
+
+
+
+/* --- footer --- */
+
+.pos_footer {
+    float: left;
+    width: 100%;
+    background: #17679D;
+    padding: 0 0 70px;
+    margin-top: -5px;
+    color: #b0cfdb;
+    font: 11px Arial, sans-serif;
+}
+.pos_footer a { color: #B0CFDB !important; }
+
+#ondas { background: #17679D }
+
+.pos_footer > .row {
+    margin: 0 auto;
+    width: 960px;
+}
+.footer-links {
+    width: 250px;
+}
+
+
+/* --------------------------------------
+    Q&A PLUS //madebyraygun.com/wordpress/plugins/q-and-a-plus/
+-----------------------------------------------------*/
+
+.qa-category{margin-bottom: 40px !important;}
+h2.faq-catname{
+	margin: 20px 0 10px 0;
+}
+h3.qa-faq-title {
+	font-size: 14px;
+	line-height: 18px;
+    margin: 8px 0;
+}
+
+a.qa-show-more{color:#666 !important;}
+a.qa-show-more:hover{color:#1D7AC6 !important; text-decoration: underline;}
+
+#qaplus_searchform {
+	background: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* --------------------------------------
+    RESPONSIVE
+-----------------------------------------------------*/
+
+
+/* iPads (restrato e paisagem) //blog.popupdesign.com.br/design-responsivo-iii-media-queries-e-compatibilidade/ */
+@media only screen
+and (max-device-width : 960px) {
+     /* estilos */
+      
+    .site-description {
+    display: none;
+    } 
+    
+    .header > .row,
+	.content > .row,
+	.footer > .row,
+	.nav-bar > .row,
+	.pos_footer > .row,
+	.toolbar .row  {
+	    width: auto;
+	}
+      
+}
 
