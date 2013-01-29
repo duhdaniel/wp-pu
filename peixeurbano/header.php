@@ -37,6 +37,15 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 
 <div class="header">
 	    <div class="row">
@@ -51,11 +60,20 @@
 <div class="toolbar">
 <div class="row">
 
-			<a href="/faq/">Ajuda</a>
-			<a href="/faq/peixe-urbano">Imprensa</a>
-			<a href="/faq/institucional">Institucional</a>
-			<a href="http://blumenthal.com.br/faq/dev/template">#Dev</a>
-		
+			<a class="menu-item-1" href="/faq/">Ajuda</a>
+			<a class="menu-item-2" href="/faq/institucional">Institucional</a>
+			<a class="menu-item-3" href="/faq/peixe-urbano">Imprensa</a>
+			<a class="menu-item-4" href="/faq/seja-parceiro">Seja Parceiro</a>
+			<a class="menu-item-5" href="http://www.linkedin.com/company/peixe-urbano" title="Link abrirá em nova janela." target="_blank">Trabalhe conosco</a>
+			
+			
+			<form role="search" method="get" id="header-search" action="<?php echo home_url( '/' ); ?>">
+			    <div> 
+			        <input type="text" value="" name="s" id="s" placeholder="Buscar alguma coisa..." />
+			        <input type="submit" id="searchsubmit" value="buscar" class="secondary" />
+			    </div>
+			</form>
+	
 </div> <!-- fecha row -->
 </div>
 
