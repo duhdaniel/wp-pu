@@ -1,13 +1,25 @@
 <?php
 /**
- * The default template for displaying content. Used for both single and index/archive/search.
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
  *
  * @package WordPress
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-?>
 
+get_header(); ?>
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			<?php while ( have_posts() ) : the_post(); ?>
+				
+				
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
 		<div class="featured-post">
@@ -16,12 +28,9 @@
 		<?php endif; ?>
 		<header class="entry-header">
 			<?php the_post_thumbnail(); ?>
-			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<?php else : ?>
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( '%s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-			</h1>
+			
+			<h1 class="entry-title" style="color:red;"><?php the_title(); ?>+++++</h1>
+			qual o texto?qual o texto?qual o texto?
 			
 			<footer class="entry-meta">
 			<?php twentytwelve_entry_meta(); ?>
@@ -50,7 +59,7 @@
 			
 		</footer><!-- .entry-meta -->
 		
-			<?php endif; // is_single() ?>
+			
 			
 		</header><!-- .entry-header -->
 
@@ -67,3 +76,14 @@
 
 		
 	</article><!-- #post -->
+	
+	
+	
+				<?php comments_template( '', true ); ?>
+			<?php endwhile; // end of the loop. ?>
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

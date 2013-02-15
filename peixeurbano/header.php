@@ -60,11 +60,11 @@
 <div class="toolbar">
 <div class="row">
 
-			<a class="menu-item-1" href="/faq/">Ajuda</a>
 			<a class="menu-item-2" href="/faq/institucional">Institucional</a>
-			<a class="menu-item-3" href="/faq/peixe-urbano">Imprensa</a>
 			<a class="menu-item-4" href="/faq/seja-parceiro">Seja Parceiro</a>
-			<a class="menu-item-5" href="http://www.linkedin.com/company/peixe-urbano" title="Link abrirá em nova janela." target="_blank">Trabalhe conosco</a>
+			<a class="menu-item-3" href="/faq/peixe-urbano">Imprensa</a>
+			<a class="menu-item-5" href="/faq/trabalhe-conosco">Trabalhe conosco</a>
+			<a class="menu-item-1" href="/faq/ajuda">Ajuda</a>
 			
 			
 			<form role="search" method="get" id="header-search" action="<?php echo home_url( '/' ); ?>">

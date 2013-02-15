@@ -46,7 +46,7 @@ ul.subpages li {
 
 
 /* --------------------------------------
-    LINHAS COM LARGURA FIXA
+    HEADER
 -----------------------------------------------------*/
 
 .header{
@@ -57,14 +57,14 @@ ul.subpages li {
 
 h1.site-title {display: block;}
 h1.site-title a{
-    background: url('http://blumenthal.com.br/faq/wp-content/themes/peixeurbano/logo-azul.jpg') no-repeat white;
+    background: url('http://blumenthal.com.br/faq/wp-content/themes/peixeurbano/img/logo-azul.jpg') no-repeat white;
     text-indent: -9999px;
     overflow: hidden;
     display: block;
     height: 78px;
 }
 h1.site-title a:active {
-    background: url('http://blumenthal.com.br/faq/wp-content/themes/peixeurbano/logo-azul.jpg') no-repeat white 0px 1px;
+    background: url('http://blumenthal.com.br/faq/wp-content/themes/peixeurbano/img/logo-azul.jpg') no-repeat white 0px 1px;
 }
 
 .site-description {
@@ -111,7 +111,7 @@ span.entry-title{
     background: #0A4572;
 }
 
-body.home .menu-item-1 {
+body.page-id-5 .menu-item-1 {
 	background: #0C5189;
     color: white !important;
     cursor: not-allowed;
@@ -126,10 +126,15 @@ body.blog .menu-item-3 {
     color: white !important;
     cursor: not-allowed;
 }
-body.page-id-96 .menu-item-4, body.page-id-96 .menu-item-4:hover {
-	background: none;
+body.page-id-96 .menu-item-4 {
+	background: #0C5189;
     color: white !important;
-    cursor: text;
+    cursor: not-allowed;
+}
+body.page-id-385 .menu-item-5 {
+	background: #0C5189;
+    color: white !important;
+    cursor: not-allowed;
 }
 
 
@@ -154,15 +159,17 @@ body.page-id-96 .menu-item-4, body.page-id-96 .menu-item-4:hover {
 a {color: #1D7AC6 !important; text-decoration: none; }
 a:hover, a:active {text-decoration: underline; }
 
+
 body .site {
 		padding: 0 40px;
 		padding: 0 2.857142857rem;
-		margin-top: 40px;
+		margin-top: 0px;
 		margin-bottom: 48px;
 		margin-bottom: 3.428571429rem;
 		box-shadow: none;
 		border: 1px solid #ccc;
-		border-radius: 6px;
+		border-top: none;
+		border-radius: 0px 0px 6px 6px;
 	}
 	
 .site-header {
@@ -192,20 +199,21 @@ footer#colophon {
     color: #A8C9DF;
     box-shadow: none;
     padding: 5px 5px 5px 12px;
-    width: 180px;
+    width: 220px;
     height: auto !ie;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
     transition: none;
+    font-size: 12px;
     }
 #header-search input[type="text"]:hover {
     background-color: #2678AF;
-    border:1px solid #A8C9DF;
+    border:1px solid #A4C4D7;
     color: white;
     }
 #header-search input[type="submit"] {
-    background: url("http://www.peixeurbano.com.br/Content/V2/newdesign/img/new_sprite.png") no-repeat scroll 1px -353px transparent;
+    background: url("http://www.blumenthal.com.br/faq/wp-content/themes/peixeurbano/img/lupa.png") no-repeat scroll 2px -2px transparent;
     border: none;
     box-shadow: none;
     content: "";
@@ -216,8 +224,11 @@ footer#colophon {
     text-indent: -9999px;
     top: 8px;
     width: 20px;
-
 }
+#header-search input[type="submit"]:hover {   
+    border: none !important;
+}
+
 body #header-search input:-moz-input-placeholder{ color: #A8C9DF; }
 body #header-search input:-ms-input-placeholder{ color: #A8C9DF; }
 body #header-search input::-webkit-input-placeholder{ color: #A8C9DF; }
@@ -236,13 +247,15 @@ body #header-search input:focus::-webkit-input-placeholder{ color: #A8C9DF; }
 /* --------------------------------------
     PAGES
 -----------------------------------------------------*/
+.widget-area li {margin: 0 !important;}
 
+.subpages li.page_item{
+	background: white;
+	border-bottom: 1px solid #ccc;
+}
 .subpages li.page_item a{
-	padding: 10px;
-	border-radius: 5px;
-	margin-bottom: 14px;
 	display: block;
-	background: #f1f1f1;
+	padding: 10px;
 }
 
 .subpages li.page_item a:hover{
@@ -566,12 +579,51 @@ a.qa-show-more:hover{color:#1D7AC6 !important; text-decoration: underline;}
 	font-size: 11px !important;
 }
 
+.foibompravc {
+	background: #f9f9f9;
+    padding: 10px !important;
+    position: relative;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.foibompravc .qa-post-like {
+	    line-height: 36px;
+	    margin: 0;
+}
+.foibompravc a span.qa-rating-helper {
+	font-size: 14px;
+	color: #1D7AC6;
+	display: inline-block;
+}
+a span.qa-rating-helper:hover  {
+	text-decoration: underline;
+}
+.btnfaleconosco {
+	font-size: 11px !important;
+	color: white !important;
+    padding: 10px !important;
+    font-size: 12px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
 
 .youtube_gallery_caption{
 	font-size: 14px !important;
 	font-style: normal !important;
 	color: #999;
 }
+
+body.single-qa_faqs h1.entry-title a {
+	display: none !important;
+}
+
+.qa-faq-answer{
+	background: #f9f9f9;
+	padding: 10px;
+	border-radius: 5px;
+	}
 
 
 /* --------------------------------------
@@ -646,5 +698,6 @@ and (max-device-width : 960px) {
 /* --------------------------------------
     CHANGE LOG:
     - qa plus plugin: incluído class primary no btn de busca
-    - 
+    - qa plus plugin: include functions.php do include -- tradução de labels
+    - qa plus plugin: incluido btn do fale conosco ratings.php e traduções 
 -----------------------------------------------------*/
